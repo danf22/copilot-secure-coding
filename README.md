@@ -14,6 +14,7 @@ GitHub Copilot, when used strategically, can be an invaluable asset in building 
 This document explores how GitHub Copilot serves as a powerful, collaborative AI assistant for identifying and resolving software vulnerabilities.  It highlights how Copilot can integrate security directly into the development workflow, transforming the traditional "velocity-security tradeoff" into a synergy of speed and security.
 
 ----------
+![Alt text](relative%20image1.png?raw=true "Title")
 
 ### **The Velocity-Security Tradeoff**  ⚖️
 
