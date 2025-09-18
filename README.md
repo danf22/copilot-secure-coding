@@ -14,7 +14,7 @@ GitHub Copilot, when used strategically, can be an invaluable asset in building 
 This document explores how GitHub Copilot serves as a powerful, collaborative AI assistant for identifying and resolving software vulnerabilities.  It highlights how Copilot can integrate security directly into the development workflow, transforming the traditional "velocity-security tradeoff" into a synergy of speed and security.
 
 ----------
-[<img src="image1.png">],
+<img src="image1.png">,
 
 ### **The Velocity-Security Tradeoff**  ⚖️
 
@@ -36,6 +36,7 @@ Copilot assists developers in identifying and resolving common software vulnerab
     
 -   **Guidelines with `.github/copilot-instructions.md`**: You can use this file to embed codebase-wide security practices and context directly into Copilot's AI workflows, ensuring it consistently adheres to your team's security standards without requiring explicit prompts for every guideline.
 
+<img src="image2.png">,
 ## Workspace-Wide Security Validation
 
 Copilot can perform a broader security validation across your entire project workspace.  This is especially useful for getting a high-level overview of potential vulnerabilities or for scanning for specific patterns across multiple files.
@@ -69,6 +70,8 @@ This example illustrates how Copilot can find and fix specific security issues.
     `.env.development`, `.env.production`), and even execute commands in the terminal to add necessary packages.
     
 5.  **Reviewing Changes**: Developers can review the changes made by Copilot and choose to either "Keep" or "Undo" them.
+
+<img src="image3.png">,
 
 ## **The Human Element: Reviewing and Refining AI-Generated Code** 🧑‍💻
 
