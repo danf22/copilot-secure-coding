@@ -27,20 +27,26 @@ namespace ecom.ProductService.Controllers
             return Ok(await _productApplication.ListAsync());
         }
 
-        [HttpGet("{id}", Name = "GetById")]
-        [AllowAnonymous] // Allow public access to product details
-        public async Task<ActionResult<Product>> GetById(string id)
+[HttpGet("{id}", Name = "GetById")]
+[AllowAnonymous]
+public async Task<ActionResult<Product>> GetById(string id)
+{
+    if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out _))
+    {
+        _logger.LogWarning("Invalid product ID format attempted: {ID}", id);
+        return BadRequest("Invalid product ID format");
+    }
+
+    // Change this
+     var product = await _productApplication.GetAsync(id.ToString());
+
+     if (product == null)
         {
-            _logger.LogInformation($"Getting product by id: {id}");
-            var product = await _productApplication.GetAsync(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return product;
+         return NotFound();
         }
 
-        [HttpPost (Name = "product")]
+         return Ok(product);
+}        [HttpPost (Name = "product")]
         [Authorize(Roles = "Admin")] // Only admins can add products
         public async Task<ActionResult<string>> Add(Product product)
         {
